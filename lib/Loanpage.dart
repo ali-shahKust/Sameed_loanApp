@@ -224,16 +224,37 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                   ],
                 ),
               ),
-              MaterialButton(
-                color:Constant.appColor,
-                elevation: 0,
-                onPressed: () {},
-                child: Text(
-                  "Apply for a Loan", textAlign: TextAlign.center, style: TextStyle(
-                    fontSize: 20.0,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500
-                ),),
+              Container(
+                height: 100,
+                padding:EdgeInsets.only(left:30.0,right: 30.0,top:20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+
+                ),
+
+                child:  MaterialButton(
+                  color:Colors.yellow.shade700,
+                  elevation: 0,
+                  onPressed: () {},
+                  child: Container(
+                    padding: EdgeInsets.all(15.0),
+                    child: Row(
+                      children: <Widget>[
+                        Text(
+                          "Upload Document for Collateral", textAlign: TextAlign.center, style: TextStyle(
+                            fontSize: 12.0,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500
+                        ),),
+                        IconButton(
+                          icon: Icon(Icons.file_upload,color: Colors.white,),
+                          onPressed: () {
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               )
             ],
           ),

@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sameed_ui/Faq.dart';
-import 'package:sameed_ui/HomePage.dart';
-import 'package:sameed_ui/Loanpage.dart';
-import 'package:sameed_ui/QuotePage.dart';
-import 'package:sameed_ui/applyloanpage.dart';
+import 'package:sameed_ui/SplashScreen.dart';
 
 void main()=>runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
@@ -20,7 +16,7 @@ class _MyAppState extends State<MyApp> {
 
     return Scaffold(
 
-     body: LoanHomePage(),
+     body: SplashScreen(),
     );
   }
 }
