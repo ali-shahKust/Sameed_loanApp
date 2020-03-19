@@ -23,16 +23,16 @@ class _ApplyLoanState extends State<ApplyLoan> {
     return GestureDetector(
       onTap: () {
         switch (title) {
-          case "BussinessLoan":
+          case "Business Loan":
             Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
             break;
-          case "PayDayLoan":
+          case "PayDay Loan":
             Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
             break;
-          case "FlexLoan":
+          case "Flex Loan":
             Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
             break;
-          case "InstalmentLoan":
+          case "Instalment Loan":
             Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
             break;
         }
@@ -161,9 +161,9 @@ class _ApplyLoanState extends State<ApplyLoan> {
                     mainAxisSpacing: 20,
                     crossAxisSpacing: 10,
                     children: <Widget>[
-                      cards('images/g5.png', 'BussinessLoan'),
-                      cards('images/g2.png', 'PayDayLoan'),
-                      cards('images/g3.png', 'FlexLoan'),
+                      cards('images/g5.png', 'BusinessLoan'),
+                      cards('images/g2.png', 'PayDay Loan'),
+                      cards('images/g3.png', 'Flex Loan'),
                       cards(
                           'images/g4.png', 'InstalmentLoan'),
                     ],

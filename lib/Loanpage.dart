@@ -148,7 +148,7 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                       color: Colors.grey.shade200,
                       child: TextFormField(
                         decoration:  InputDecoration(
-                          hintText: "Auttomobiles",
+                          hintText: "Automobile",
                           fillColor: Colors.white70,
                           border:  OutlineInputBorder(
                             borderRadius:  BorderRadius.circular(5.0),

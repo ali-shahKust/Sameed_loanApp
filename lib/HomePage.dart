@@ -25,7 +25,7 @@ class _LoanHomePageState extends State<LoanHomePage> {
     return GestureDetector(
       onTap: () {
         switch (title) {
-         case "Texes":
+         case "Taxes":
             Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
             break;
           case "Loan":
@@ -121,7 +121,7 @@ class _LoanHomePageState extends State<LoanHomePage> {
                       mainAxisSpacing: 30,
                       crossAxisSpacing: 10,
                       children: <Widget>[
-                        cards('images/g1.png', 'Texes'),
+                        cards('images/g1.png', 'Taxes'),
                         cards('images/g1.png', 'Loan'),
                         cards('images/g1.png', 'Insurance'),
                         cards(
