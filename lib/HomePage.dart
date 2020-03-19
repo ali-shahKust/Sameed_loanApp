@@ -150,13 +150,30 @@ class _LoanHomePageState extends State<LoanHomePage> {
             Expanded(
               flex: 1,
               child: Container(
+                color: Colors.green,
                 width: MediaQuery.of(context).size.width * 0.85,
-                child: DrawerHeader(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("images/header.jpeg"),
-                          fit: BoxFit.cover)),
-                  child: Text("Header"),
+                child: Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      DrawerHeader(
+//                        decoration: BoxDecoration(
+//                            shape: BoxShape.circle,
+//                            gradient:
+//                            LinearGradient(colors: [active, Colors.white30]),
+//                        ),
+                        child: CircleAvatar(
+                          radius: 60,
+                          backgroundImage: AssetImage('images/profile.png')
+
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 40.0),
+                        child: Text('User Name'),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
