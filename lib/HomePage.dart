@@ -26,10 +26,10 @@ class _LoanHomePageState extends State<LoanHomePage> {
       onTap: () {
         switch (title) {
          case "Texes":
-            Navigator.push(context, MaterialPageRoute(builder: (context) => ApplyLoan()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
             break;
           case "Loan":
-            Navigator.push(context, MaterialPageRoute(builder: (context) => loanFaq()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => ApplyLoan()));
             break;
           case "Insurance":
             Navigator.push(context, MaterialPageRoute(builder: (context) => QuotePage()));
@@ -212,14 +212,13 @@ class _LoanHomePageState extends State<LoanHomePage> {
                     child: Text("Other"),
                   ),
                   onTap: () {
-                    Navigator.of(context).pop();
                   },
                 ),
                 ListTile(
                   leading : Icon(Icons.not_listed_location),
                   title: Text("FAQ"),
                   onTap: () {
-                    Navigator.of(context).pop();
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => loanFaq()));
                   },
                 ),
                 ListTile(

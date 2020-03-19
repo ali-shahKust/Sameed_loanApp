@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sameed_ui/HomePage.dart';
 import 'package:sameed_ui/constant.dart';
 
+import 'Loanpage.dart';
+
 
 class ApplyLoan extends StatefulWidget {
   @override
@@ -21,15 +23,18 @@ class _ApplyLoanState extends State<ApplyLoan> {
     return GestureDetector(
       onTap: () {
         switch (title) {
-        /* case "My Session":
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Session_Page()));
+          case "BussinessLoan":
+            Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
             break;
-          case "My Request":
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Request_Page()));
+          case "PayDayLoan":
+            Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
             break;
-          case "Profile":
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Profile_Setting()));
-            break;*/
+          case "FlexLoan":
+            Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
+            break;
+          case "InstalmentLoan":
+            Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
+            break;
         }
       },
       child: Container(
