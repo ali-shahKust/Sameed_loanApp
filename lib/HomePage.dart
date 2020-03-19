@@ -181,53 +181,62 @@ class _LoanHomePageState extends State<LoanHomePage> {
               flex: 2,
               child: ListView(children: [
                 ListTile(
-                  title: Text("Home"),
+                  leading : Icon(Icons.dashboard),
+                  title:Text("DashBoard"),
                   onTap: () {
                     Navigator.of(context).pop();
                   },
                 ),
                 ListTile(
-                  title: Text("Home"),
+                  leading : Icon(Icons.account_box),
+                  title: Text("Profile"),
                   onTap: () {
                     Navigator.of(context).pop();
                   },
                 ),
                 ListTile(
-                  title: Text("Home"),
+                  leading : Icon(Icons.calendar_today),
+
+                  title: Text("Upload Center"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                Divider(color: Colors.black45,
+                height: 30,
+                  thickness: .2,
+                ),
+                ListTile(
+                  title: Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text("Other"),
+                  ),
                   onTap: () {
                     Navigator.of(context).pop();
                   },
                 ),
                 ListTile(
-                  title: Text("Home"),
+                  leading : Icon(Icons.not_listed_location),
+                  title: Text("FAQ"),
                   onTap: () {
                     Navigator.of(context).pop();
                   },
                 ),
                 ListTile(
-                  title: Text("Home"),
+                  leading : Icon(Icons.email),
+                  title: Text("SUPPORT"),
                   onTap: () {
                     Navigator.of(context).pop();
                   },
                 ),
                 ListTile(
-                  title: Text("Home"),
+                  leading : Icon(Icons.exit_to_app),
+                  title: Text("LOGOUT"),
                   onTap: () {
                     Navigator.of(context).pop();
                   },
                 ),
-                ListTile(
-                  title: Text("Home"),
-                  onTap: () {
-                    Navigator.of(context).pop();
-                  },
-                ),
-                ListTile(
-                  title: Text("Home"),
-                  onTap: () {
-                    Navigator.of(context).pop();
-                  },
-                )
+
               ]),
             )
           ],
