@@ -14,6 +14,7 @@ class LoanHomePage extends StatefulWidget {
 class _LoanHomePageState extends State<LoanHomePage> {
   Color active = Constant.appColor;
   Color primary = Constant.appColor;
+  final GlobalKey _scaffoldKey = new GlobalKey();
 
   @override
   void initState() {
@@ -77,67 +78,143 @@ class _LoanHomePageState extends State<LoanHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
+
       backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Stack(
-          children: <Widget>[
+      body: Builder(builder: (context){
+        return SafeArea(
+          child: Stack(
+            children: <Widget>[
 
-            CustomScrollView(
-              slivers: <Widget>[
-                SliverToBoxAdapter(
-                  child: Row(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20.0),
-                        child: IconButton(
-                          icon: Icon(Icons.menu, color: Colors.black54,),
-                          onPressed: () {
-
-                          },
+              CustomScrollView(
+                slivers: <Widget>[
+                  SliverToBoxAdapter(
+                    child: Row(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20.0),
+                          child: IconButton(
+                            icon: Icon(Icons.menu, color: Colors.black54,),
+                            onPressed: () {
+                              Scaffold.of(context).openDrawer();
+                            },
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20.0),
-                        child: Center(
-                          child: Text('Deshboard',
-                              style: TextStyle(
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.w900,
-                                  color: Colors.black54)),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20.0),
+                          child: Center(
+                            child: Text('Deshboard',
+                                style: TextStyle(
+                                    fontSize: 32,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.black54)),
+                          ),
                         ),
-                      ),
 
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-                SliverPadding(
-                  padding: const EdgeInsets.all(26.0),
-                  sliver: SliverGrid.count(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 30,
-                    crossAxisSpacing: 10,
-                    children: <Widget>[
-                      cards('images/g1.png', 'Texes'),
-                      cards('images/g1.png', 'Loan'),
-                      cards('images/g1.png', 'Insurance'),
-                      cards(
-                          'images/g1.png', 'Upload Center'),
-                    ],
+                  SliverPadding(
+                    padding: const EdgeInsets.all(26.0),
+                    sliver: SliverGrid.count(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 30,
+                      crossAxisSpacing: 10,
+                      children: <Widget>[
+                        cards('images/g1.png', 'Texes'),
+                        cards('images/g1.png', 'Loan'),
+                        cards('images/g1.png', 'Insurance'),
+                        cards(
+                            'images/g1.png', 'Upload Center'),
+                      ],
+                    ),
                   ),
-                ),
 
-              ],
+                ],
 
-            ),
+              ),
 
-          ],
-        ),
-      ),
+            ],
+          ),
+        );
+      }),
       floatingActionButton: FloatingActionButton(onPressed: () {
 
       },
         backgroundColor: Constant.appColor,
         child: Icon(Icons.email),
+      ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.85,
+                child: DrawerHeader(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("images/header.jpeg"),
+                          fit: BoxFit.cover)),
+                  child: Text("Header"),
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: ListView(children: [
+                ListTile(
+                  title: Text("Home"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: Text("Home"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: Text("Home"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: Text("Home"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: Text("Home"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: Text("Home"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: Text("Home"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: Text("Home"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                )
+              ]),
+            )
+          ],
+        ),
       ),
     );
   }
