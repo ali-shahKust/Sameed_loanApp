@@ -161,11 +161,11 @@ class _ApplyLoanState extends State<ApplyLoan> {
                     mainAxisSpacing: 20,
                     crossAxisSpacing: 10,
                     children: <Widget>[
-                      cards('images/g5.png', 'BusinessLoan'),
+                      cards('images/g5.png', 'Business Loan'),
                       cards('images/g2.png', 'PayDay Loan'),
                       cards('images/g3.png', 'Flex Loan'),
                       cards(
-                          'images/g4.png', 'InstalmentLoan'),
+                          'images/g4.png', 'Instalment Loan'),
                     ],
                   ),
                 ),

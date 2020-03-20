@@ -103,7 +103,7 @@ class _LoanHomePageState extends State<LoanHomePage> {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20.0),
                           child: Center(
-                            child: Text('Deshboard',
+                            child: Text('Dashboard',
                                 style: TextStyle(
                                     fontSize: 32,
                                     fontWeight: FontWeight.w900,
