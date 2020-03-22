@@ -1,5 +1,6 @@
 
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sameed_ui/HomePage.dart';
 import 'package:sameed_ui/constant.dart';
@@ -194,7 +195,7 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                       child: Row(
                         children: <Widget>[
                           Expanded(
-                              child: buildDropdownButton(['Are you currently employed','Yes','No',],'Are you currently employed')
+                              child: buildDropEmploye(['Are you currently employed','Yes','No',],'Are you currently employed')
                           ),
                         ],
                       ),
@@ -284,7 +285,7 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                       child: Row(
                         children: <Widget>[
                           Expanded(
-                              child: buildDropdownButton(['How soon can you pay back this loan?',
+                              child: buildDropReturnLoan(['How soon can you pay back this loan?',
                                 '1 week',  '1 month',
                                 '3 months', '6 months',
                                 '1 year'],'How soon can you pay back this loan?')
@@ -417,7 +418,6 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                   borderRadius: BorderRadius.circular(30),
 
                 ),
-
                 child:  Row(
                   children: <Widget>[
                     Expanded(
@@ -452,11 +452,40 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Container(
+                  height: 260,
+
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 1.0,
+                      ),
+                    ],
+                    color: Colors.white,
+                  ),
+                  child: Row(
+                    children: <Widget>[
+                    Flexible(
+                      child :Text(
+                        "You are applying generally for credit and not for a specific credit product or amount. Any product/amount offered will depend on the credit and underwriting standards of the lender.By clicking “Submit My Loan Request”, you (i) consent to receiving telemarketing calls and messages, including calls using an automatic telephone dialing system, from MoneyBack Now and those acting on its behalf at the telephone number you have provided above (including your cellular phone number); agree that this consent applies even if the number you have provided is currently on any state, federal, or corporate Do-Not-Call registry; and understand that you are not required to provide this consent as a condition of receiving any credit or services from MoneyBack Now and that you may apply for loan by contacting us directly; and (ii) acknowledge that you have read Moneyback Now’s ​Application Agreement​ and ​Privacy Policy​ and understand that you may opt out of receiving communications of your choice from MoneyBack Now as provided in the Privacy Policy"
+                      ,style: TextStyle(
+
+                       fontSize: 12,
+                        fontWeight: FontWeight.w300
+                      ),)
+                    )
+                  ],
+                  ),
+
+                ),
+              ),
 
             ],
           ),
-
-
     );
   }
   //Drop Down Menu to get Specific Field Of Items
@@ -472,6 +501,49 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
           child: Text(value),
         );
       }).toList(),
+    );
+  }
+
+  //Drop Down Menu to get Specific Field Of Items
+  Widget buildDropEmploye(List<String> items, String selectedValue) {
+    return DropdownButton<String>(
+      isExpanded: true,
+      value: selectedValue,
+      onChanged: (value) {
+      },
+      items: items.map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+    );
+  }
+
+  //Drop Down Menu to get Specific Field Of Items
+  Widget buildDropReturnLoan(List<String> items, String selectedValue) {
+    return DropdownButton<String>(
+      isExpanded: true,
+      value: selectedValue,
+      onChanged: (value) {
+      },
+      items: items.map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+    );
+  }
+
+  BoxDecoration myBoxDecoration() {
+    return BoxDecoration(
+      border: Border.all(
+          width: 3.0
+      ),
+      borderRadius: BorderRadius.all(
+          Radius.circular(5.0) //                 <--- border radius here
+      ),
     );
   }
 }
