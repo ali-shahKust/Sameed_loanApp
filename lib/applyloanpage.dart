@@ -163,7 +163,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                     children: <Widget>[
                       cards('images/g5.png', 'Business Loan'),
                       cards('images/g2.png', 'PayDay Loan'),
-                      cards('images/g3.png', 'Flex Loan'),
+                      cards('images/g3.png', 'Flex Loan',),
                       cards(
                           'images/g4.png', 'Instalment Loan'),
                     ],
