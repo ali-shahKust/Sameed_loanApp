@@ -1,8 +1,10 @@
 
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:sameed_ui/HomePage.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:sameed_ui/constant.dart';
 
 class LoanPage extends StatefulWidget {
@@ -11,15 +13,27 @@ class LoanPage extends StatefulWidget {
 }
 
 class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
+
+  int selectedRadio;
+
+  int myvalue= 1;
   @override
   void initState() {
     super.initState();
+    selectedRadio = 1;
+  }
+  SetselectedRadio(int val){
+    setState((){
+      selectedRadio = val;
+
+    });
   }
 
   @override
   void dispose() {
     super.dispose();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +42,6 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
 
 
       body:
-
           ListView(
             children: <Widget>[
               Container(
@@ -62,7 +75,14 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.only(left : 18.0),
-                      child: Radio(value: 'Personal', groupValue: 'rad', onChanged:null ),
+                      child: Radio(value: 1, groupValue: selectedRadio, activeColor: Colors.green,  onChanged:(val){
+                        SetselectedRadio(val);
+                        myvalue = selectedRadio;
+                        setState(() {
+
+                        });
+                        print('my value is $selectedRadio');
+                      },),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left:2.0),
@@ -73,7 +93,13 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                         )
                       ),
                     ),
-                    Radio(value: Text('Buisness'), groupValue: 'rad', onChanged: null),
+                    Radio(value: 2, groupValue: selectedRadio,activeColor: Colors.green, onChanged: (val){
+                      SetselectedRadio(val);
+                      setState(() {
+                        myvalue = selectedRadio;
+                      });
+                      print('my value is $myvalue');
+                    },),
                     Padding(
                       padding: const EdgeInsets.only(left:2.0),
                       child: Text('Business'
@@ -87,7 +113,7 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                   ],
                 ),
               ),
-              Container(
+             myvalue ==1 ? Container(
                 color: Colors.white,
                 padding: EdgeInsets.only(left: 30.0,right: 30.0),
                 child: Column(
@@ -96,7 +122,6 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                     SizedBox(
                       height: 8.0,
                     ),
-
                     Container(
                       height: 40,
                       color: Colors.grey.shade200,
@@ -337,9 +362,32 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
 
                   ],
                 ),
-              ),
-              Container(
-                height: 100,
+              ):Container(
+               child: Padding(
+                 padding: const EdgeInsets.all(22.0),
+                 child: Center(
+                   child: new RichText(
+                     text: new TextSpan(
+                       children: [
+                         new TextSpan(
+                           text: 'Please go to our website to apply at: ',
+                           style: new TextStyle(color: Colors.black),
+                         ),
+                         new TextSpan(
+                           text: 'https://moneybacknow.net/',
+                           style: new TextStyle(color: Colors.blue),
+                           recognizer: new TapGestureRecognizer()
+                             ..onTap = () { launch('https://moneybacknow.net/');
+                             },
+                         ),
+                       ],
+                     ),
+                   ),
+                 ),
+               ),
+             ),
+             myvalue ==1 ? Container(
+                height: 85,
                 padding:EdgeInsets.only(left:30.0,right: 30.0,top:20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
@@ -409,13 +457,13 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                     ),
                   ],
                 ),
-              ),
+              ):Container(),
 
-              Container(
-                height: 100,
+             myvalue== 1? Container(
+                height: 80,
                 padding:EdgeInsets.only(left:30.0,right: 30.0,top:20),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(60),
 
                 ),
                 child:  Row(
@@ -451,8 +499,8 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
 
                   ],
                 ),
-              ),
-              Padding(
+              ):Container(),
+              myvalue==1 ?Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Container(
                   height: 260,
@@ -482,7 +530,7 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                   ),
 
                 ),
-              ),
+              ):Container(),
 
             ],
           ),

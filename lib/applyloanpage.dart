@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sameed_ui/HomePage.dart';
 import 'package:sameed_ui/constant.dart';
 
+import 'Faq.dart';
 import 'Loanpage.dart';
 
 
@@ -13,6 +14,7 @@ class ApplyLoan extends StatefulWidget {
 class _ApplyLoanState extends State<ApplyLoan> {
   Color active = Constant.appColor;
   Color primary = Constant.appColor;
+  final GlobalKey<ScaffoldState> _key = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -77,6 +79,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      key: _key,
       body: SafeArea(
         child: Stack(
           children: <Widget>[
@@ -91,9 +94,9 @@ class _ApplyLoanState extends State<ApplyLoan> {
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20.0),
                             child: IconButton(
-                              icon: Icon(Icons.arrow_back, color: Colors.black54,),
+                              icon: Icon(Icons.list, color: Colors.black54,),
                               onPressed: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => LoanHomePage()));
+                                _key.currentState.openDrawer();
                               },
                             ),
                           ),
@@ -174,14 +177,103 @@ class _ApplyLoanState extends State<ApplyLoan> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
+      drawer: Drawer(
+        child: Column(
+          children: [
+            Expanded(
+              flex: 1,
+              child: Container(
+                color: Colors.green,
+                width: MediaQuery.of(context).size.width * 0.85,
+                child: Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      DrawerHeader(
+//                        decoration: BoxDecoration(
+//                            shape: BoxShape.circle,
+//                            gradient:
+//                            LinearGradient(colors: [active, Colors.white30]),
+//                        ),
+                        child: CircleAvatar(
+                            radius: 60,
+                            backgroundImage: AssetImage('images/profile.png')
 
-      },
-        backgroundColor: Constant.appColor,
-        child: Icon(Icons.email),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 40.0),
+                        child: Text('User Name'),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: ListView(children: [
+                ListTile(
+                  leading : Icon(Icons.dashboard),
+                  title:Text("DashBoard"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  leading : Icon(Icons.account_box),
+                  title: Text("Profile"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  leading : Icon(Icons.calendar_today),
+
+                  title: Text("Upload Center"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                Divider(color: Colors.black45,
+                  height: 30,
+                  thickness: .2,
+                ),
+                ListTile(
+                  title: Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text("Other"),
+                  ),
+                  onTap: () {
+                  },
+                ),
+                ListTile(
+                  leading : Icon(Icons.not_listed_location),
+                  title: Text("FAQ"),
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => loanFaq()));
+                  },
+                ),
+                ListTile(
+                  leading : Icon(Icons.email),
+                  title: Text("SUPPORT"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  leading : Icon(Icons.exit_to_app),
+                  title: Text("LOGOUT"),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+
+              ]),
+            )
+          ],
+        ),
       ),
     );
   }
-
-
 }
