@@ -182,10 +182,14 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   fontWeight: FontWeight.bold
                               ),),
                               SizedBox(height: 8,),
-                              Text('Typically \$500 or less and loan must be paid back by next payday ',style: TextStyle(
-                                color: Colors.green,
-                                  fontSize: 12
-                              ),),
+                              Padding(
+
+                                padding: const EdgeInsets.only(left :5.0, right:5.0),
+                                child: Text('Typically \$500 or less and loan must be paid back by next payday ',style: TextStyle(
+                                  color: Colors.green,
+                                    fontSize: 10
+                                ),),
+                              ),
                               SizedBox(height: 8,),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.end,
@@ -216,10 +220,13 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                 fontWeight: FontWeight.bold
                               ),),
                               SizedBox(height: 8,),
-                              Text(' Typically more than \$500 with a term repayment plan ',style: TextStyle(
-                                  color: Colors.green
-                                      ,fontSize: 12
-                              ),),SizedBox(height: 8,),
+                              Padding(
+                                padding: const EdgeInsets.only(left :5.0, right:5.0),
+                                child: Text('Typically more than \$500 with a term repayment plan ',style: TextStyle(
+                                    color: Colors.green
+                                        ,fontSize: 11
+                                ),),
+                              ),SizedBox(height: 8,),
                               Column(
 
                                 mainAxisAlignment: MainAxisAlignment.end,
@@ -251,9 +258,13 @@ class _ApplyLoanState extends State<ApplyLoan> {
     fontWeight: FontWeight.bold
     ),),
                               SizedBox(height: 8,),
-                              Text('Typically \$500 or less and loan must be paid back by next payday ',style: TextStyle(
-                                  color: Colors.green,fontSize: 12
-                              ),),
+                              Padding(
+
+                                padding: const EdgeInsets.only(left :5.0, right:5.0),
+                                child: Text('Typically \$500 or less and loan must be paid back by next payday ',style: TextStyle(
+                                    color: Colors.green,fontSize: 10
+                                ),),
+                              ),
                               SizedBox(height: 8,),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.end,
@@ -285,10 +296,14 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   fontWeight: FontWeight.bold
                               ),),
                               SizedBox(height: 8,),
-                              Text('This is a term loan for business owners with an established business ',style: TextStyle(
-                                  color: Colors.green,
-                                  fontSize: 12
-                              ),),
+                              Padding(
+
+                                padding: const EdgeInsets.only(left :5.0, right:5.0),
+                                child: Text('This is a term loan for business owners with an established business ',style: TextStyle(
+                                    color: Colors.green,
+                                    fontSize: 10
+                                ),),
+                              ),
 
                               SizedBox(height: 8,),
                               Column(
