@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:sameed_ui/HomePage.dart';
+import 'package:sameed_ui/successfull.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:sameed_ui/constant.dart';
 
@@ -400,7 +401,7 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                     Expanded(
                       flex: 1,
                       child: MaterialButton(
-                        color:Colors.yellow.shade700,
+                        color:Colors.green.shade700,
                         elevation: 0,
                         onPressed: () {},
                         child: Container(
@@ -426,7 +427,7 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                     Expanded(
                       flex: 1,
                       child: MaterialButton(
-                        color:Colors.yellow.shade700,
+                        color:Colors.green.shade700,
                         elevation: 0,
                         onPressed: () {},
                         child: Container(
@@ -461,9 +462,11 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                     Expanded(
                       flex: 1,
                       child: MaterialButton(
-                        color:Colors.yellow.shade700,
+                        color:Colors.green.shade700,
                         elevation: 0,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Successfull_page()));
+                        },
                         child: Container(
                           padding: EdgeInsets.all(15.0),
                           child: Row(
@@ -489,9 +492,9 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                 ),
               ):Container(),
               myvalue==1 ?Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(22.0),
                 child: Container(
-                  height: 260,
+                  height: 280,
 
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -506,13 +509,16 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                   child: Row(
                     children: <Widget>[
                     Flexible(
-                      child :Text(
-                        "You are applying generally for credit and not for a specific credit product or amount. Any product/amount offered will depend on the credit and underwriting standards of the lender.By clicking “Submit My Loan Request”, you (i) consent to receiving telemarketing calls and messages, including calls using an automatic telephone dialing system, from MoneyBack Now and those acting on its behalf at the telephone number you have provided above (including your cellular phone number); agree that this consent applies even if the number you have provided is currently on any state, federal, or corporate Do-Not-Call registry; and understand that you are not required to provide this consent as a condition of receiving any credit or services from MoneyBack Now and that you may apply for loan by contacting us directly; and (ii) acknowledge that you have read Moneyback Now’s ​Application Agreement​ and ​Privacy Policy​ and understand that you may opt out of receiving communications of your choice from MoneyBack Now as provided in the Privacy Policy"
-                      ,style: TextStyle(
+                      child :Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "You are applying generally for credit and not for a specific credit product or amount. Any product/amount offered will depend on the credit and underwriting standards of the lender.By clicking “Submit My Loan Request”, you (i) consent to receiving telemarketing calls and messages, including calls using an automatic telephone dialing system, from MoneyBack Now and those acting on its behalf at the telephone number you have provided above (including your cellular phone number); agree that this consent applies even if the number you have provided is currently on any state, federal, or corporate Do-Not-Call registry; and understand that you are not required to provide this consent as a condition of receiving any credit or services from MoneyBack Now and that you may apply for loan by contacting us directly; and (ii) acknowledge that you have read Moneyback Now’s ​Application Agreement​ and ​Privacy Policy​ and understand that you may opt out of receiving communications of your choice from MoneyBack Now as provided in the Privacy Policy"
+                        ,style: TextStyle(
 
-                       fontSize: 12,
-                        fontWeight: FontWeight.w300
-                      ),)
+                         fontSize: 12,
+                          fontWeight: FontWeight.w300
+                        ),),
+                      )
                     )
                   ],
                   ),
@@ -530,6 +536,9 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
       isExpanded: true,
       value: selectedValue,
       onChanged: (value) {
+        setState(() {
+          selectedValue = value;
+        });
       },
       items: items.map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
@@ -546,6 +555,9 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
       isExpanded: true,
       value: selectedValue,
       onChanged: (value) {
+        setState(() {
+          selectedValue = value;
+        });
       },
       items: items.map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
@@ -562,6 +574,9 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
       isExpanded: true,
       value: selectedValue,
       onChanged: (value) {
+        setState(() {
+          selectedValue = value;
+        });
       },
       items: items.map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(

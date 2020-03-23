@@ -183,9 +183,17 @@ class _ApplyLoanState extends State<ApplyLoan> {
                               ),),
                               SizedBox(height: 8,),
                               Text('Typically \$500 or less and loan must be paid back by next payday ',style: TextStyle(
-                                color: Colors.green
+                                color: Colors.green,
+                                  fontSize: 12
                               ),),
-                              Image.asset('images/g2.png', width: 40,height: 40,),
+                              SizedBox(height: 8,),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: <Widget>[
+                                  Image.asset('images/g2.png', width: 40,height: 40,),
+                                ],
+                              ),
 
                             ],
                           ),
@@ -210,8 +218,16 @@ class _ApplyLoanState extends State<ApplyLoan> {
                               SizedBox(height: 8,),
                               Text(' Typically more than \$500 with a term repayment plan ',style: TextStyle(
                                   color: Colors.green
-                              ),),SizedBox(height: 18,),
-                              Image.asset('images/g3.png', width: 40,height: 40,),
+                                      ,fontSize: 12
+                              ),),SizedBox(height: 8,),
+                              Column(
+
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: <Widget>[
+                                  Image.asset('images/g3.png', width: 40,height: 40,),
+                                ],
+                              ),
 
                             ],
                           ),
@@ -236,10 +252,16 @@ class _ApplyLoanState extends State<ApplyLoan> {
     ),),
                               SizedBox(height: 8,),
                               Text('Typically \$500 or less and loan must be paid back by next payday ',style: TextStyle(
-                                  color: Colors.green
+                                  color: Colors.green,fontSize: 12
                               ),),
-                              SizedBox(height: 5,),
-                              Image.asset('images/g4.png', width: 40,height: 40,),
+                              SizedBox(height: 8,),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: <Widget>[
+                                  Image.asset('images/g4.png', width: 40,height: 40,),
+                                ],
+                              ),
 
                             ],
                           ),
@@ -262,11 +284,20 @@ class _ApplyLoanState extends State<ApplyLoan> {
                               Text('Business Loan',style: TextStyle(
                                   fontWeight: FontWeight.bold
                               ),),
-                              SizedBox(height: 10,),
+                              SizedBox(height: 8,),
                               Text('This is a term loan for business owners with an established business ',style: TextStyle(
-                                  color: Colors.green
+                                  color: Colors.green,
+                                  fontSize: 12
                               ),),
-                              Image.asset('images/g5.png', width: 40,height: 40,),
+
+                              SizedBox(height: 8,),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: <Widget>[
+                                  Image.asset('images/g5.png', width: 40,height: 40,),
+                                ],
+                              ),
 
                             ],
                           ),
