@@ -376,8 +376,8 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                          new TextSpan(
                            text: 'https://moneybacknow.net/',
                            style: new TextStyle(color: Colors.blue),
-                           recognizer: new TapGestureRecognizer()
-                             ..onTap = () { launch('https://moneybacknow.net/');
+                           recognizer:
+                           new TapGestureRecognizer()..onTap = () { launch('https://moneybacknow.net/');
                              },
                          ),
                        ],
@@ -408,16 +408,11 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                             children: <Widget>[
                               Flexible(
                                 child: Text(
-                                  "Driver’s license ", textAlign: TextAlign.center, style: TextStyle(
+                                  "Driver’s license Copy", textAlign: TextAlign.center, style: TextStyle(
                                     fontSize: 10.0,
                                     color: Colors.white,
                                     fontWeight: FontWeight.w500
                                 ),),
-                              ),
-                              IconButton(
-                                icon: Icon(Icons.file_upload,color: Colors.white,),
-                                onPressed: () {
-                                },
                               ),
                             ],
                           ),
@@ -439,16 +434,11 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                             children: <Widget>[
                               Flexible(
                                 child: Text(
-                                  "Most recent paystub ", textAlign: TextAlign.center, style: TextStyle(
+                                  "Recent Paystub Copy", textAlign: TextAlign.center, style: TextStyle(
                                     fontSize: 10.0,
                                     color: Colors.white,
                                     fontWeight: FontWeight.w500
                                 ),),
-                              ),
-                              IconButton(
-                                icon: Icon(Icons.file_upload,color: Colors.white,),
-                                onPressed: () {
-                                },
                               ),
                             ],
                           ),
@@ -458,10 +448,9 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                   ],
                 ),
               ):Container(),
-
              myvalue== 1? Container(
                 height: 80,
-                padding:EdgeInsets.only(left:30.0,right: 30.0,top:20),
+                padding:EdgeInsets.only(left:30.0,right: 30.0,top:10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(60),
 
@@ -485,11 +474,6 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                                     color: Colors.white,
                                     fontWeight: FontWeight.w500
                                 ),),
-                              ),
-                              IconButton(
-                                icon: Icon(Icons.arrow_forward,color: Colors.white,),
-                                onPressed: () {
-                                },
                               ),
                             ],
                           ),

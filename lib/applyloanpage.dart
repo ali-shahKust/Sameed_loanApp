@@ -21,59 +21,58 @@ class _ApplyLoanState extends State<ApplyLoan> {
     super.initState();
   }
 
-  Widget cards(image, title) {
-    return GestureDetector(
-      onTap: () {
-        switch (title) {
-          case "Business Loan":
-            Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
-            break;
-          case "PayDay Loan":
-            Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
-            break;
-          case "Flex Loan":
-            Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
-            break;
-          case "Instalment Loan":
-            Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
-            break;
-        }
-      },
-      child: Container(
-        height: 200,
-        width: 200,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey,
-              blurRadius: 6.0,
-            ),
-          ],
-          color: Colors.white,
-        ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-
-              Image.asset(
-                image,
-                height: 50,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(title,
-                  style: TextStyle(fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Constant.appColor)),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+//  Widget cards(image, title) {
+//    return GestureDetector(
+//      onTap: () {
+//        switch (title) {
+//          case "Business Loan":
+//            Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
+//            break;
+//          case "PayDay Loan":
+//            break;
+//          case "Flex Loan":
+//            Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
+//            break;
+//          case "Instalment Loan":
+//            Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
+//            break;
+//        }
+//      },
+//      child: Container(
+//        height: 200,
+//        width: 200,
+//        decoration: BoxDecoration(
+//          borderRadius: BorderRadius.circular(10),
+//          boxShadow: [
+//            BoxShadow(
+//              color: Colors.grey,
+//              blurRadius: 6.0,
+//            ),
+//          ],
+//          color: Colors.white,
+//        ),
+//        child: Center(
+//          child: Column(
+//            mainAxisAlignment: MainAxisAlignment.center,
+//            children: <Widget>[
+//
+//              Image.asset(
+//                image,
+//                height: 50,
+//              ),
+//              SizedBox(
+//                height: 10,
+//              ),
+//              Text(title,
+//                  style: TextStyle(fontWeight: FontWeight.bold,
+//                      fontSize: 18,
+//                      color: Constant.appColor)),
+//            ],
+//          ),
+//        ),
+//      ),
+//    );
+//  }
 
   @override
   Widget build(BuildContext context) {
@@ -158,17 +157,121 @@ class _ApplyLoanState extends State<ApplyLoan> {
                 ),
 
                 SliverPadding(
+
                   padding: const EdgeInsets.all(40.0),
                   sliver: SliverGrid.count(
                     crossAxisCount: 2,
                     mainAxisSpacing: 20,
                     crossAxisSpacing: 10,
                     children: <Widget>[
-                      cards('images/g5.png', 'Business Loan'),
-                      cards('images/g2.png', 'PayDay Loan'),
-                      cards('images/g3.png', 'Flex Loan',),
-                      cards(
-                          'images/g4.png', 'Instalment Loan'),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
+
+                        },
+                        child: Container(
+                          width: 200,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300 , width: 1),
+                            borderRadius: BorderRadius.all(Radius.circular(15)),
+                          ),
+                          child: Column(
+                            children: <Widget>[
+                              Text('PayDay Loan',style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                              ),),
+                              SizedBox(height: 8,),
+                              Text('Typically \$500 or less and loan must be paid back by next payday ',style: TextStyle(
+                                color: Colors.green
+                              ),),
+                              Image.asset('images/g2.png', width: 40,height: 40,),
+
+                            ],
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
+                        },
+                        child: Container(
+                          width: 200,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300 , width: 1),
+                            borderRadius: BorderRadius.all(Radius.circular(15)),
+                          ),
+                          child: Column(
+                            children: <Widget>[
+                              Text('Personal Loan',style: TextStyle(
+                                fontWeight: FontWeight.bold
+                              ),),
+                              SizedBox(height: 8,),
+                              Text(' Typically more than \$500 with a term repayment plan ',style: TextStyle(
+                                  color: Colors.green
+                              ),),SizedBox(height: 18,),
+                              Image.asset('images/g3.png', width: 40,height: 40,),
+
+                            ],
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
+
+    },
+                        child: Container(
+                          width: 200,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300 , width: 1),
+                            borderRadius: BorderRadius.all(Radius.circular(15)),
+                          ),
+                          child: Column(
+                            children: <Widget>[
+                              Text('Instalment Loan',style: TextStyle(
+    fontWeight: FontWeight.bold
+    ),),
+                              SizedBox(height: 8,),
+                              Text('Typically \$500 or less and loan must be paid back by next payday ',style: TextStyle(
+                                  color: Colors.green
+                              ),),
+                              SizedBox(height: 5,),
+                              Image.asset('images/g4.png', width: 40,height: 40,),
+
+                            ],
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
+
+                        },
+                        child: Container(
+                          width: 200,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade300 , width: 1),
+                            borderRadius: BorderRadius.all(Radius.circular(15)),
+                          ),
+                          child: Column(
+                            children: <Widget>[
+                              Text('Business Loan',style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                              ),),
+                              SizedBox(height: 10,),
+                              Text('This is a term loan for business owners with an established business ',style: TextStyle(
+                                  color: Colors.green
+                              ),),
+                              Image.asset('images/g5.png', width: 40,height: 40,),
+
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -190,11 +293,6 @@ class _ApplyLoanState extends State<ApplyLoan> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       DrawerHeader(
-//                        decoration: BoxDecoration(
-//                            shape: BoxShape.circle,
-//                            gradient:
-//                            LinearGradient(colors: [active, Colors.white30]),
-//                        ),
                         child: CircleAvatar(
                             radius: 60,
                             backgroundImage: AssetImage('images/profile.png')
