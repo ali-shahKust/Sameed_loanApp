@@ -52,6 +52,7 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                       child: IconButton(
                         icon: Icon(Icons.arrow_back, color: Colors.black54,),
                         onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> LoanHomePage()));
 
                         },
                       ),
