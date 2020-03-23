@@ -468,12 +468,15 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
                           child: Row(
                             children: <Widget>[
                               Flexible(
-                                child: Text(
-                                  "Submit your loan request", textAlign: TextAlign.center, style: TextStyle(
-                                    fontSize: 10.0,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500
-                                ),),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left:50.0),
+                                  child: Text(
+                                    "Submit your loan request", textAlign: TextAlign.center, style: TextStyle(
+                                      fontSize: 10.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500
+                                  ),),
+                                ),
                               ),
                             ],
                           ),
