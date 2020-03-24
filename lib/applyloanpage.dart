@@ -83,7 +83,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   left: 10.0, right: 10.0, top: 20.0),
                               child: Center(
                                 child: Text(
-                                  "Loan on Cash? Get a quick loan decision",
+                                  "Want your chance at some free money Enter into one of our contests for your chance to win",
                                   style: TextStyle(
                                       fontSize: 22.0,
                                       fontWeight: FontWeight.bold,
@@ -97,10 +97,19 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   right: 20.0,
                                   bottom: 10.0,
                                   top: 10.0),
-                              child: Text(
-                                "Mauris congue luctus neque, in semper purus maximus iaculis. Donec et eleifend quam, a sollicitudin magna.",
-                                textAlign: TextAlign.justify,
-                                style: TextStyle(color: Colors.grey.shade600),
+                              child:new RichText(
+                                text: new TextSpan(
+                                  children: [
+
+                                    new TextSpan(
+                                      text: 'Click here to register for our next upcoming contest to win some cash!',
+                                      style: new TextStyle(color: Colors.blue),
+                                      recognizer:
+                                      new TapGestureRecognizer()..onTap = () { launch('https://moneybacknow.net/contest');
+                                      },
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
@@ -300,32 +309,6 @@ class _ApplyLoanState extends State<ApplyLoan> {
                   child: Divider(
                     height: 0.3,
                     color: Colors.green,
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.grey,width: 1)
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(18.0),
-                    child: new RichText(
-                      text: new TextSpan(
-                        children: [
-                          new TextSpan(
-                            text: 'Want your chance at some free money Enter into one of our contests for your chance to win ',
-                            style: new TextStyle(color: Colors.black),
-                          ),
-                          new TextSpan(
-                            text: 'Click here to register for our next upcoming contest to win some cash!',
-                            style: new TextStyle(color: Colors.blue),
-                            recognizer:
-                            new TapGestureRecognizer()..onTap = () { launch('https://moneybacknow.net/contest');
-                            },
-                          ),
-                        ],
-                      ),
-                    ),
                   ),
                 ),
               ],
