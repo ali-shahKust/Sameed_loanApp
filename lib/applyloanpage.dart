@@ -320,7 +320,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             text: 'Click here to register for our next upcoming contest to win some cash!',
                             style: new TextStyle(color: Colors.blue),
                             recognizer:
-                            new TapGestureRecognizer()..onTap = () { launch('https://moneybacknow.net/');
+                            new TapGestureRecognizer()..onTap = () { launch('https://moneybacknow.net/contest');
                             },
                           ),
                         ],
