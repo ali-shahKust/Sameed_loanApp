@@ -138,7 +138,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             Column(
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.only(right:70.0),
+                                  padding: const EdgeInsets.only(right:85.0),
                                   child: Text(
                                     'PayDay Loan',
                                     style: TextStyle(fontWeight: FontWeight.bold),
@@ -186,7 +186,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             Column(
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.only(right:70.0),
+                                  padding: const EdgeInsets.only(right:65.0),
                                   child: Text(
                                     'Personal Loan',
                                     style: TextStyle(fontWeight: FontWeight.bold),
@@ -234,7 +234,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             Column(
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.only(right:70.0),
+                                  padding: const EdgeInsets.only(right:75.0),
                                   child: Text(
                                     'Business Loan',
                                     style: TextStyle(fontWeight: FontWeight.bold),
@@ -282,7 +282,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             Column(
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.only(right:70.0),
+                                  padding: const EdgeInsets.only(right:65.0),
                                   child: Text(
                                     'Instalment Loan',
                                     style: TextStyle(fontWeight: FontWeight.bold),
