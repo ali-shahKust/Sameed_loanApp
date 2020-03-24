@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:sameed_ui/HomePage.dart';
 import 'package:sameed_ui/constant.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'Faq.dart';
 import 'Loanpage.dart';
@@ -119,23 +121,22 @@ class _ApplyLoanState extends State<ApplyLoan> {
                       children: <Widget>[
                         Row(
                           children: <Widget>[
-                            Column(
-                              children: <Widget>[
-                                Image.asset(
-                                  'images/g2.png',
-                                  width: 40,
-                                  height: 40,
-                                ),
-                              ],
+                            Image.asset(
+                              'images/g2.png',
+                              width: 40,
+                              height: 40,
                             ),
                             Column(
                               children: <Widget>[
-                                Text(
-                                  'PayDay Loan',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                Padding(
+                                  padding: const EdgeInsets.only(right:70.0),
+                                  child: Text(
+                                    'PayDay Loan',
+                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                  ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 12.0),
+                                  padding: const EdgeInsets.only(left: 12.0,top:8),
                                   child: Text(
                                     'Typically \$500 or less and loan must be \npaid back by next payday ',
                                     style: TextStyle(
@@ -168,25 +169,24 @@ class _ApplyLoanState extends State<ApplyLoan> {
                       children: <Widget>[
                         Row(
                           children: <Widget>[
-                            Column(
-                              children: <Widget>[
-                                Image.asset(
-                                  'images/g3.png',
-                                  width: 40,
-                                  height: 40,
-                                ),
-                              ],
+                            Image.asset(
+                              'images/g3.png',
+                              width: 40,
+                              height: 40,
                             ),
                             Column(
                               children: <Widget>[
-                                Text(
-                                  'Personal Loan',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                Padding(
+                                  padding: const EdgeInsets.only(right:70.0),
+                                  child: Text(
+                                    'Personal Loan',
+                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                  ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 12.0),
+                                  padding: const EdgeInsets.only(left: 12.0,top:8),
                                   child: Text(
-                                    'Typically more than \$500 \nwith a term repayment plan ',
+                                    'Typically more than \$500 with a term \nrepayment plan ',
                                     style: TextStyle(
                                         color: Colors.green, fontSize: 10),
                                   ),
@@ -217,23 +217,22 @@ class _ApplyLoanState extends State<ApplyLoan> {
                       children: <Widget>[
                         Row(
                           children: <Widget>[
-                            Column(
-                              children: <Widget>[
-                                Image.asset(
-                                  'images/g5.png',
-                                  width: 40,
-                                  height: 40,
-                                ),
-                              ],
+                            Image.asset(
+                              'images/g5.png',
+                              width: 40,
+                              height: 40,
                             ),
                             Column(
                               children: <Widget>[
-                                Text(
-                                  'Business Loan',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                Padding(
+                                  padding: const EdgeInsets.only(right:70.0),
+                                  child: Text(
+                                    'Business Loan',
+                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                  ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 12.0),
+                                  padding: const EdgeInsets.only(left: 12.0,top:8),
                                   child: Text(
                                     'Typically \$500 or less and loan must be \npaid back by next payday ',
                                     style: TextStyle(
@@ -266,23 +265,22 @@ class _ApplyLoanState extends State<ApplyLoan> {
                       children: <Widget>[
                         Row(
                           children: <Widget>[
-                            Column(
-                              children: <Widget>[
-                                Image.asset(
-                                  'images/g4.png',
-                                  width: 40,
-                                  height: 40,
-                                ),
-                              ],
+                            Image.asset(
+                              'images/g4.png',
+                              width: 40,
+                              height: 40,
                             ),
                             Column(
                               children: <Widget>[
-                                Text(
-                                  'Instalment Loan',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                Padding(
+                                  padding: const EdgeInsets.only(right:70.0),
+                                  child: Text(
+                                    'Instalment Loan',
+                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                  ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 12.0),
+                                  padding: const EdgeInsets.only(left: 12.0,top:8),
                                   child: Text(
                                     'Typically \$500 or less and loan must be \npaid back by next payday ',
                                     style: TextStyle(
@@ -302,6 +300,32 @@ class _ApplyLoanState extends State<ApplyLoan> {
                   child: Divider(
                     height: 0.3,
                     color: Colors.green,
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.grey,width: 1)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(18.0),
+                    child: new RichText(
+                      text: new TextSpan(
+                        children: [
+                          new TextSpan(
+                            text: 'Want your chance at some free money Enter into one of our contests for your chance to win ',
+                            style: new TextStyle(color: Colors.black),
+                          ),
+                          new TextSpan(
+                            text: 'Click here to register for our next upcoming contest to win some cash!',
+                            style: new TextStyle(color: Colors.blue),
+                            recognizer:
+                            new TapGestureRecognizer()..onTap = () { launch('https://moneybacknow.net/');
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ],

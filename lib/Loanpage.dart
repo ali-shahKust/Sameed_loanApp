@@ -494,7 +494,7 @@ class _LoanPageState extends State<LoanPage> with TickerProviderStateMixin {
               myvalue==1 ?Padding(
                 padding: const EdgeInsets.all(22.0),
                 child: Container(
-                  height: 280,
+                  height: 350,
 
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
