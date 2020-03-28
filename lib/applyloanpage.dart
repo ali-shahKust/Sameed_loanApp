@@ -74,7 +74,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                               blurRadius: 1.0,
                             ),
                           ],
-                          color: Colors.green,
+                          color: Constant.appColor,
                         ),
                         child: Column(
                           children: <Widget>[
@@ -96,8 +96,8 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             ),
                             Container(
                               padding: EdgeInsets.only(
-                                  left: 20.0,
-                                  right: 20.0,
+                                  left: .02,
+                                  right: 35.0,
                                   bottom: 10.0,
                                   top: 10.0),
                               child:Text('Fast online application. Quick approvals. \nPerfect credit not needed',style: TextStyle(
@@ -322,7 +322,8 @@ class _ApplyLoanState extends State<ApplyLoan> {
                       children: [
                         new TextSpan(
                           text: 'Click here to register for our next upcoming contest to win some cash!',
-                          style: new TextStyle(color: Colors.blue,fontSize: 12),
+                          style: new TextStyle(color: Colors.blue,fontSize: 12,
+                            decoration: TextDecoration.underline,),
                           recognizer:
                           new TapGestureRecognizer()
                             ..onTap = () {
