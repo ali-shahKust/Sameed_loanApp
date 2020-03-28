@@ -74,20 +74,23 @@ class _ApplyLoanState extends State<ApplyLoan> {
                               blurRadius: 1.0,
                             ),
                           ],
-                          color: Colors.white,
+                          color: Colors.green,
                         ),
                         child: Column(
                           children: <Widget>[
                             Container(
                               padding: EdgeInsets.only(
-                                  left: 10.0, right: 10.0, top: 20.0),
+                                  left: 20.0,
+                                  right: 20.0,
+                                  bottom: 10.0,
+                                  top: 10.0),
                               child: Center(
                                 child: Text(
-                                  "Want your chance at some free money Enter into one of our contests for your chance to win",
+                                  "Need a money now... \nWe can work with bad credit",
                                   style: TextStyle(
                                       fontSize: 22.0,
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.black54),
+                                      color: Colors.white),
                                 ),
                               ),
                             ),
@@ -97,20 +100,11 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   right: 20.0,
                                   bottom: 10.0,
                                   top: 10.0),
-                              child:new RichText(
-                                text: new TextSpan(
-                                  children: [
-
-                                    new TextSpan(
-                                      text: 'Click here to register for our next upcoming contest to win some cash!',
-                                      style: new TextStyle(color: Colors.blue),
-                                      recognizer:
-                                      new TapGestureRecognizer()..onTap = () { launch('https://moneybacknow.net/contest');
-                                      },
-                                    ),
-                                  ],
-                                ),
-                              ),
+                              child:Text('Fast online application. Quick approvals. \nPerfect credit not needed',style: TextStyle(
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.white),
+                              )
                             ),
                           ],
                         ),
@@ -118,14 +112,22 @@ class _ApplyLoanState extends State<ApplyLoan> {
                     ),
                   ],
                 ),
-                SizedBox(height:70,),
+                SizedBox(height:20,),
+               Padding(
+                 padding: const EdgeInsets.all(12.0),
+                 child: Text('Get Start Now',style: TextStyle(
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey.shade600),
+                  ),
+               ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => LoanPage()));
                   },
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(left :22.0, top:8),
                     child: Column(
                       children: <Widget>[
                         Row(
@@ -141,7 +143,9 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   padding: const EdgeInsets.only(right:85.0),
                                   child: Text(
                                     'PayDay Loan',
-                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                    style: TextStyle(fontWeight: FontWeight.bold,
+                                      color: Colors.grey.shade600,
+                                    ),
                                   ),
                                 ),
                                 Padding(
@@ -149,7 +153,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   child: Text(
                                     'Typically \$500 or less and loan must be \npaid back by next payday ',
                                     style: TextStyle(
-                                        color: Colors.green, fontSize: 10),
+                                        color: Colors.grey.shade500, fontSize: 10),
                                   ),
                                 ),
                               ],
@@ -160,20 +164,13 @@ class _ApplyLoanState extends State<ApplyLoan> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 50.0, right: 50),
-                  child: Divider(
-                    height: 0.3,
-                    color: Colors.green,
-                  ),
-                ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => LoanPage()));
                   },
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(left :22.0, top:15),
                     child: Column(
                       children: <Widget>[
                         Row(
@@ -189,7 +186,9 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   padding: const EdgeInsets.only(right:65.0),
                                   child: Text(
                                     'Personal Loan',
-                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                    style: TextStyle(fontWeight: FontWeight.bold,
+                                      color: Colors.grey.shade600,
+                                    ),
                                   ),
                                 ),
                                 Padding(
@@ -197,7 +196,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   child: Text(
                                     'Typically more than \$500 with a term \nrepayment plan ',
                                     style: TextStyle(
-                                        color: Colors.green, fontSize: 10),
+                                        color: Colors.grey.shade500, fontSize: 10),
                                   ),
                                 ),
                               ],
@@ -208,20 +207,14 @@ class _ApplyLoanState extends State<ApplyLoan> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 50.0, right: 50),
-                  child: Divider(
-                    height: 0.3,
-                    color: Colors.green,
-                  ),
-                ),
+
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => LoanPage()));
                   },
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(left :22.0, top:15),
                     child: Column(
                       children: <Widget>[
                         Row(
@@ -237,7 +230,9 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   padding: const EdgeInsets.only(right:75.0),
                                   child: Text(
                                     'Business Loan',
-                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                    style: TextStyle(fontWeight: FontWeight.bold,
+                                      color: Colors.grey.shade600,
+                                    ),
                                   ),
                                 ),
                                 Padding(
@@ -245,7 +240,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   child: Text(
                                     'Typically \$500 or less and loan must be \npaid back by next payday ',
                                     style: TextStyle(
-                                        color: Colors.green, fontSize: 10),
+                                        color: Colors.grey.shade500, fontSize: 10),
                                   ),
                                 ),
                               ],
@@ -256,20 +251,13 @@ class _ApplyLoanState extends State<ApplyLoan> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 50.0, right: 50),
-                  child: Divider(
-                    height: 0.3,
-                    color: Colors.green,
-                  ),
-                ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => LoanPage()));
                   },
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(left :22.0, top:15),
                     child: Column(
                       children: <Widget>[
                         Row(
@@ -285,7 +273,9 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   padding: const EdgeInsets.only(right:65.0),
                                   child: Text(
                                     'Instalment Loan',
-                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                    style: TextStyle(fontWeight: FontWeight.bold,
+                                    color: Colors.grey.shade600,
+                                    ),
                                   ),
                                 ),
                                 Padding(
@@ -293,24 +283,57 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   child: Text(
                                     'Typically \$500 or less and loan must be \npaid back by next payday ',
                                     style: TextStyle(
-                                        color: Colors.green, fontSize: 10),
+                                        color: Colors.grey.shade500, fontSize: 10),
                                   ),
                                 ),
                               ],
+
                             ),
+
                           ],
+
                         ),
                       ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 50.0, right: 50),
-                  child: Divider(
-                    height: 0.3,
-                    color: Colors.green,
+
+                  Container(
+                  padding: EdgeInsets.only(
+                      left: 20.0, right: 20.0, top: 20.0),
+                    child: Center(
+                      child: Text(
+                        "Want your chance at some free money Enter into one of our contests for your chance to win",
+                        style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black54),
+                      ),
+                    ),
+                  ),
+                Container(
+                  padding: EdgeInsets.only(
+                      left: 20.0,
+                      right: 20.0,
+                      bottom: 10.0,
+                      top: 10.0),
+                  child: new RichText(
+                    text: new TextSpan(
+                      children: [
+                        new TextSpan(
+                          text: 'Click here to register for our next upcoming contest to win some cash!',
+                          style: new TextStyle(color: Colors.blue,fontSize: 12),
+                          recognizer:
+                          new TapGestureRecognizer()
+                            ..onTap = () {
+                              launch('https://moneybacknow.net/contest');
+                            },
+                        ),
+                      ],
+                    ),
                   ),
                 ),
+
               ],
             ),
           ],
