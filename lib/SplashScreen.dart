@@ -13,8 +13,8 @@ class _SplashScreenState extends State<SplashScreen>with TickerProviderStateMixi
   AnimationController rotationController;
   @override
   void initState() {
-    //rotationController = AnimationController(duration: const Duration(milliseconds: 1000), vsync: this);
-    rotationController = AnimationController(duration: Duration(seconds: 5), upperBound: pi * 2, vsync: this);
+    rotationController = AnimationController(duration: const Duration(milliseconds: 1000), vsync: this);
+    //rotationController = AnimationController(duration: Duration(seconds: 5), upperBound: pi * 2, vsync: this);
     rotationController.forward(from: 0.0); // it starts the animation
     super.initState();
     Timer(
@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen>with TickerProviderStateMixi
       body:Center(
         child:
         RotationTransition(
-            turns: Tween(begin: 0.0, end: 1.0).animate(rotationController),
+            turns: Tween(begin: 1.0, end: 0.0).animate(rotationController),
             child: Image.asset('images/splash.png',fit: BoxFit.cover,)
 
         )
