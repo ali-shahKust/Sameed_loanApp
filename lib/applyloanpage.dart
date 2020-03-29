@@ -81,7 +81,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             Container(
                               padding: EdgeInsets.only(
                                   left: 20.0,
-                                  right: 20.0,
+                                  right: 70.0,
                                   bottom: 10.0,
                                   top: 10.0),
                               child: Center(
@@ -96,10 +96,10 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             ),
                             Container(
                               padding: EdgeInsets.only(
-                                  left: 20.0,
-                                  right: 20.0,
+                                  left: 5.0,
+                                  right: 100.0,
                                   bottom: 10.0,
-                                  top: 10.0),
+                                  top: 5.0),
                               child: Center(
                                 child: Text(
                                   "We work with bad credit. \nFast application process. \nBuild credit.",
@@ -118,9 +118,9 @@ class _ApplyLoanState extends State<ApplyLoan> {
                 ),
                 SizedBox(height:20,),
                Padding(
-                 padding: const EdgeInsets.all(12.0),
-                 child: Text('Get Started Now',style: TextStyle(
-                      fontSize: 22.0,
+                 padding: const EdgeInsets.only(top:12.0, left: 23,bottom: 15),
+                 child: Text('Get Started Now...',style: TextStyle(
+                      fontSize: 16.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.grey.shade600),
                   ),
@@ -224,7 +224,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                         Row(
                           children: <Widget>[
                             Image.asset(
-                              'images/g4.png',
+                              'images/g5.png',
                               width: 40,
                               height: 40,
                             ),
