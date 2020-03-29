@@ -86,7 +86,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                   top: 10.0),
                               child: Center(
                                 child: Text(
-                                  "Need a money now... \nWe can work with bad credit",
+                                  "Need a money now!",
                                   style: TextStyle(
                                       fontSize: 22.0,
                                       fontWeight: FontWeight.bold,
@@ -96,15 +96,19 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             ),
                             Container(
                               padding: EdgeInsets.only(
-                                  left: .02,
-                                  right: 35.0,
+                                  left: 20.0,
+                                  right: 20.0,
                                   bottom: 10.0,
                                   top: 10.0),
-                              child:Text('Fast online application. Quick approvals. \nPerfect credit not needed',style: TextStyle(
-                                  fontSize: 12.0,
-                                  fontWeight: FontWeight.normal,
-                                  color: Colors.white),
-                              )
+                              child: Center(
+                                child: Text(
+                                  "We work with bad credit. \nFast application process. \nBuild credit.",
+                                  style: TextStyle(
+                                      fontSize: 12.0,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
+                              ),
                             ),
                           ],
                         ),
@@ -115,7 +119,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                 SizedBox(height:20,),
                Padding(
                  padding: const EdgeInsets.all(12.0),
-                 child: Text('Get Start Now',style: TextStyle(
+                 child: Text('Get Started Now',style: TextStyle(
                       fontSize: 22.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.grey.shade600),
@@ -140,7 +144,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             Column(
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.only(right:85.0),
+                                  padding: const EdgeInsets.only(right:145.0),
                                   child: Text(
                                     'PayDay Loan',
                                     style: TextStyle(fontWeight: FontWeight.bold,
@@ -151,7 +155,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                 Padding(
                                   padding: const EdgeInsets.only(left: 12.0,top:8),
                                   child: Text(
-                                    'Typically \$500 or less and loan must be \npaid back by next payday ',
+                                    'This loan type is typically less than \$500 and must be \npaid back by next payday ',
                                     style: TextStyle(
                                         color: Colors.grey.shade500, fontSize: 10),
                                   ),
@@ -183,7 +187,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             Column(
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.only(right:65.0),
+                                  padding: const EdgeInsets.only(right:83.0),
                                   child: Text(
                                     'Personal Loan',
                                     style: TextStyle(fontWeight: FontWeight.bold,
@@ -194,7 +198,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                                 Padding(
                                   padding: const EdgeInsets.only(left: 12.0,top:8),
                                   child: Text(
-                                    'Typically more than \$500 with a term \nrepayment plan ',
+                                    'This loan type typically \$500 or more with \nrepayment plan of 3 months or more',
                                     style: TextStyle(
                                         color: Colors.grey.shade500, fontSize: 10),
                                   ),
@@ -208,49 +212,6 @@ class _ApplyLoanState extends State<ApplyLoan> {
                   ),
                 ),
 
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => LoanPage()));
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.only(left :22.0, top:15),
-                    child: Column(
-                      children: <Widget>[
-                        Row(
-                          children: <Widget>[
-                            Image.asset(
-                              'images/g5.png',
-                              width: 40,
-                              height: 40,
-                            ),
-                            Column(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(right:75.0),
-                                  child: Text(
-                                    'Business Loan',
-                                    style: TextStyle(fontWeight: FontWeight.bold,
-                                      color: Colors.grey.shade600,
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 12.0,top:8),
-                                  child: Text(
-                                    'Typically \$500 or less and loan must be \npaid back by next payday ',
-                                    style: TextStyle(
-                                        color: Colors.grey.shade500, fontSize: 10),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
@@ -270,42 +231,40 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             Column(
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.only(right:65.0),
+                                  padding: const EdgeInsets.only(right:120.0),
                                   child: Text(
-                                    'Instalment Loan',
+                                    'Business Loan',
                                     style: TextStyle(fontWeight: FontWeight.bold,
-                                    color: Colors.grey.shade600,
+                                      color: Colors.grey.shade600,
                                     ),
                                   ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 12.0,top:8),
                                   child: Text(
-                                    'Typically \$500 or less and loan must be \npaid back by next payday ',
+                                    'This loan type is typically for established \nbusiness that have been open for one year or more',
                                     style: TextStyle(
                                         color: Colors.grey.shade500, fontSize: 10),
                                   ),
                                 ),
                               ],
-
                             ),
-
                           ],
-
                         ),
                       ],
                     ),
                   ),
                 ),
 
+
                   Container(
                   padding: EdgeInsets.only(
-                      left: 20.0, right: 20.0, top: 20.0),
+                      left: 25.0, right: 25.0, top: 20.0),
                     child: Center(
                       child: Text(
-                        "Want your chance at some free money Enter into one of our contests for your chance to win",
+                        "Want a chance at some free money enter into one of our contests for a chance to win up to \$100.00 every month",
                         style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 12.0,
                             fontWeight: FontWeight.bold,
                             color: Colors.black54),
                       ),
@@ -313,8 +272,8 @@ class _ApplyLoanState extends State<ApplyLoan> {
                   ),
                 Container(
                   padding: EdgeInsets.only(
-                      left: 20.0,
-                      right: 20.0,
+                      left: 30.0,
+                      right: 30.0,
                       bottom: 10.0,
                       top: 10.0),
                   child: new RichText(
@@ -322,7 +281,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                       children: [
                         new TextSpan(
                           text: 'Click here to register for our next upcoming contest to win some cash!',
-                          style: new TextStyle(color: Colors.blue,fontSize: 12,
+                          style: new TextStyle(color: Colors.blue,fontSize: 9,
                             decoration: TextDecoration.underline,),
                           recognizer:
                           new TapGestureRecognizer()
