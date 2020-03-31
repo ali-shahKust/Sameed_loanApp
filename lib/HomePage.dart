@@ -27,11 +27,6 @@ class _LoanHomePageState extends State<LoanHomePage> {
       key: _scaffoldKey,
       backgroundColor: Colors.white,
       body: ApplyLoan(),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-      },
-        backgroundColor: Constant.appColor,
-        child: Icon(Icons.email),
-      ),
     );
   }
 
