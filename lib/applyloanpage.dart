@@ -259,21 +259,22 @@ class _ApplyLoanState extends State<ApplyLoan> {
 
                   Container(
                   padding: EdgeInsets.only(
-                      left: 25.0, right: 25.0, top: 20.0),
+                      left: 70.0, right: 70.0, top: 20.0),
                     child: Center(
                       child: Text(
                         "Want a chance at some free money enter into one of our contests for a chance to win up to \$100.00 every month",
                         style: TextStyle(
-                            fontSize: 12.0,
+                          color: Colors.grey.shade500,
+                            fontSize: 10,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black54),
+                           ),
                       ),
                     ),
                   ),
                 Container(
                   padding: EdgeInsets.only(
-                      left: 30.0,
-                      right: 30.0,
+                      left: 70.0,
+                      right: 70.0,
                       bottom: 10.0,
                       top: 10.0),
                   child: new RichText(
@@ -281,7 +282,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                       children: [
                         new TextSpan(
                           text: 'Click here to register for our next upcoming contest to win some cash!',
-                          style: new TextStyle(color: Colors.blue,fontSize: 9,
+                          style: new TextStyle(color: Colors.blue,fontSize: 7,
                             decoration: TextDecoration.underline,),
                           recognizer:
                           new TapGestureRecognizer()
