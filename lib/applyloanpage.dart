@@ -144,7 +144,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             Column(
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.only(right:160.0),
+                                  padding: const EdgeInsets.only(right:145.0),
                                   child: Text(
                                     'PayDay Loan',
                                     style: TextStyle(fontWeight: FontWeight.bold,
@@ -187,7 +187,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             Column(
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.only(right:95.0),
+                                  padding: const EdgeInsets.only(right:83.0),
                                   child: Text(
                                     'Personal Loan',
                                     style: TextStyle(fontWeight: FontWeight.bold,
@@ -231,7 +231,7 @@ class _ApplyLoanState extends State<ApplyLoan> {
                             Column(
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.only(right:135.0),
+                                  padding: const EdgeInsets.only(right:120.0),
                                   child: Text(
                                     'Business Loan',
                                     style: TextStyle(fontWeight: FontWeight.bold,
